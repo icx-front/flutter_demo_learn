@@ -1,37 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 
-class MyApp extends StatelessWidget {
+class MyAppBar extends StatelessWidget {
+  MyAppBar({this.title});
+
+  final Widget title;
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to ICX',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: RandomWords(),
-        ),
+    return Container(
+      height: 100.0,
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 40.0),
+      decoration: BoxDecoration(color: Colors.blue[500]),
+
+      // Row is a horizontal, linear layout
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigation menu',
+            onPressed: () {
+              print(this);
+            },
+          ),
+          // Expanded just like flexbox in css3
+          Expanded(
+            child: title,
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          )
+        ],
       ),
     );
   }
 }
 
-// a state class, will persists over the lifetime
-class RandomWordsState extends State<RandomWords> {
+class MyScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+    // TODO: implement build
+    return Material(
+      // Column is a vertical, linear layout
+      child: Column(
+        children: <Widget>[
+          MyAppBar(
+            title: Text(
+              'Example title',
+              style: Theme.of(context).primaryTextTheme.title,
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Text('Hello, world'),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
-// stateful class to create an instance
-// this instance here is the state class RandomWordsState
-class RandomWords extends StatefulWidget {
-  @override
-  RandomWordsState createState() => new RandomWordsState();
+void main() {
+  runApp(MaterialApp(title: 'My app', home: MyScaffold()));
 }
-
-void main() => runApp(new MyApp());
