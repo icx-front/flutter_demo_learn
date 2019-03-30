@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'Product.dart';
 import 'Counter.dart';
+import 'productList.dart';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -57,6 +59,14 @@ class MyScaffold extends StatelessWidget {
               children: <Widget>[
                 Text('我是谢尔听'),
                 Counter(),
+                ShoppingList(
+                  products: <Product>[
+                    Product(name: 'Eggs'),
+                    Product(name: 'Flour'),
+                    Product(name: 'Apple'),
+                    Product(name: 'Airpods'),
+                  ],
+                )
               ],
             ),
           ),
@@ -92,5 +102,15 @@ class MyButton extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(title: 'My app', home: MyScaffold()));
+  runApp(MaterialApp(
+      title: 'Shopping App',
+      home: ShoppingList(
+        products: <Product>[
+          Product(name: 'Eggs'),
+          Product(name: 'Apple'),
+          Product(name: 'Ear'),
+          Product(name: 'Money'),
+          Product(name: 'Chiken'),
+        ],
+      )));
 }
