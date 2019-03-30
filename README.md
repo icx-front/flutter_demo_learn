@@ -1,16 +1,11 @@
-# flutter_demo_icx
+# Step Over Flutter Demo
 
-A new Flutter project.
+## 添加一个状态控件
+无状态控件都是不可变的，这就意味着它的属性是不可变的，所有的值都是final的。
 
-## Getting Started
+状态控件维持了控件生命周期中的可能状态，实现一个状态控件至少需要两个类，
+1. 一个StatefulWidget类：用来状态控件实例。
+2. a State 类
 
-This project is a starting point for a Flutter application.
+其中StatefulWidget本身是不可变的，而实例化出的状态类在控件生命周期中是保持不变的。
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
