@@ -136,9 +136,10 @@ void main() {
       body: ListView(
         children: <Widget>[
           Image.asset(
-            'images/dog.jpeg',
+            'images/lake.jpg',
             width: 600,
             height: 240,
+            fit: BoxFit.cover,
           ),
           titleSection,
           buttonSection,
