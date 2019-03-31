@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Product.dart';
 import 'Counter.dart';
 import 'productList.dart';
+import 'ItemDetail.dart';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
