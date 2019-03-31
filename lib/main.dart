@@ -4,6 +4,7 @@ import 'Counter.dart';
 import 'productList.dart';
 import 'UserInterface/Detail.dart';
 import 'TapBox/SelfStateTapBox.dart';
+import 'Navigation/FirstRoute.dart';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -127,28 +128,36 @@ Widget textSection = Container(
   ),
 );
 
+//void main() {
+//  runApp(MaterialApp(
+//    title: 'Shopping App',
+//    home: Scaffold(
+//      appBar: AppBar(
+//        title: Text('User interface'),
+//      ),
+//      body: ListView(
+//        children: <Widget>[
+//          Image.asset(
+//            'images/lake.jpg',
+//            width: 600,
+//            height: 240,
+//            fit: BoxFit.cover,
+//          ),
+//          titleSection,
+//          buttonSection,
+//          textSection,
+//          SelfStateTapBox(),
+//          TextField(),
+//          FirstRoute(),
+//        ],
+//      ),
+//    ),
+//  ));
+//}
+
 void main() {
   runApp(MaterialApp(
-    title: 'Shopping App',
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('User interface'),
-      ),
-      body: ListView(
-        children: <Widget>[
-          Image.asset(
-            'images/lake.jpg',
-            width: 600,
-            height: 240,
-            fit: BoxFit.cover,
-          ),
-          titleSection,
-          buttonSection,
-          textSection,
-          SelfStateTapBox(),
-          TextField(),
-        ],
-      ),
-    ),
+    title: 'Navigation',
+    home: FirstRoute(),
   ));
 }
