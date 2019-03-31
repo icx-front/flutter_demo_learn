@@ -146,6 +146,7 @@ void main() {
           buttonSection,
           textSection,
           SelfStateTapBox(),
+          TextField(),
         ],
       ),
     ),
