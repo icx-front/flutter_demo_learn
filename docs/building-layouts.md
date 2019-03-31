@@ -39,6 +39,12 @@ What's the point?
 - 其他如动画之类的可以有控件自身管理。
 
 
+## Adding assets and images
+特别的，需要在`pubspec.yaml`中声明需要用的`assets`：
+
+
+
+
 
 
 
