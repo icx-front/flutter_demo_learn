@@ -23,6 +23,22 @@ What you'll learn
 - How to create custom widget
 - The difference between stateless and stateful widget
 
+## 状态管理
+What's the point?
+- There are different approaches for managing state.
+- You, as the designer, choose which approach to use.
+- If in doubt, start by managing state in the parent.
+
+谁管理状态控件的状态？是控件本身还是父级控件呢？还是都管理其状态呢？这得看情况。状态管理一般有一下几种：
+1. 自理
+2. 它理
+3. 混合双打
+
+我们可以根据一下规则来决定使用哪一种方式来管理状态控件的状态：
+- 如果是用户数据，例如复选框是否选中，slider位置，类似这些最好是由父级管理。
+- 其他如动画之类的可以有控件自身管理。
+
+
 
 
 

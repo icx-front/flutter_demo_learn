@@ -3,6 +3,7 @@ import 'Product.dart';
 import 'Counter.dart';
 import 'productList.dart';
 import 'UserInterface/Detail.dart';
+import 'TapBox/SelfStateTapBox.dart';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -144,6 +145,7 @@ void main() {
           titleSection,
           buttonSection,
           textSection,
+          SelfStateTapBox(),
         ],
       ),
     ),
