@@ -180,5 +180,7 @@ Widget textSection = Container(
 //}
 
 void main() {
-  runApp(AsyncPost());
+  runApp(AsyncPost(
+    post: fetchPost(),
+  ));
 }
