@@ -6,6 +6,7 @@ import 'UserInterface/Detail.dart';
 import 'TapBox/SelfStateTapBox.dart';
 import 'Navigation/FirstRoute.dart';
 import 'Navigation/Todo.dart';
+import 'Async/Post.dart';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -163,17 +164,21 @@ Widget textSection = Container(
 //  ));
 //}
 
+//void main() {
+//  runApp(MaterialApp(
+//    title: 'Todos',
+//    home: TodosScreen(
+//      todos: List.generate(
+//        20,
+//        (i) => Todo(
+//              'Todo $i',
+//              'A description of what needs to be done for Todo $i',
+//            ),
+//      ),
+//    ),
+//  ));
+//}
+
 void main() {
-  runApp(MaterialApp(
-    title: 'Todos',
-    home: TodosScreen(
-      todos: List.generate(
-        20,
-        (i) => Todo(
-              'Todo $i',
-              'A description of what needs to be done for Todo $i',
-            ),
-      ),
-    ),
-  ));
+  runApp(AsyncPost());
 }
