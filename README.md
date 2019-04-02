@@ -8,3 +8,5 @@
 [导航与路由](docs/navigation_and_route.md)
 
 [动态获取数据](docs/fetch_data.md)
+
+[基本控件](docs/custom_widget.md)
