@@ -7,6 +7,7 @@ import 'TapBox/SelfStateTapBox.dart';
 import 'Navigation/FirstRoute.dart';
 import 'Navigation/Todo.dart';
 import 'Async/Post.dart';
+import 'dart:async';
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -179,8 +180,35 @@ Widget textSection = Container(
 //  ));
 //}
 
+// Async and await
+Future<void> printDailyNewsDigest() async {
+  var newsDigest = await gatherNewsReports();
+  print(newsDigest);
+}
+
+printWinningLotteryNumbers() {
+  print('Winning lotto numbers: [23, 63, 87, 26, 2]');
+}
+
+printWeatherForecast() {
+  print("Tomorrow's forecast: 70F, sunny.");
+}
+
+printBaseballScore() {
+  print('Baseball score: Red Sox 10, Yankees 0');
+}
+
+const news = '<gathered news goes here>';
+const oneSecond = Duration(seconds: 1);
+
+Future<String> gatherNewsReports() => Future.delayed(oneSecond, () => news);
+
 void main() {
-  runApp(AsyncPost(
-    post: fetchPost(),
-  ));
+  printDailyNewsDigest();
+  printBaseballScore();
+  printWeatherForecast();
+  printBaseballScore();
+//  runApp(AsyncPost(
+//    post: fetchPost(),
+//  ));
 }

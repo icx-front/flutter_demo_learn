@@ -10,3 +10,5 @@
 [动态获取数据](docs/fetch_data.md)
 
 [基本控件](docs/custom_widget.md)
+
+[异步Future](docs/future.md)
