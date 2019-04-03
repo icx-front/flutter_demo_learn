@@ -12,3 +12,5 @@
 [基本控件](docs/custom_widget.md)
 
 [异步Future](docs/future.md)
+
+[异步Stream](docs/stream.md)
